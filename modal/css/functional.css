@@ -1,0 +1,29 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal {
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--magenta-300);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  min-width: 50vmin;
+  min-height: 50vmin;
+}
+
+.modal-is-open .modal-overlay {
+  opacity: 1;
+  z-index: 1;
+}
+
+.modal-overlay {
+  opacity: 0;
+  z-index: -1;
+}
