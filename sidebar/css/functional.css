@@ -1,0 +1,4 @@
+.sidebar-is-open .sidebar-container,
+.sidebar-is-open .site-container {
+  transform: translateX(14rem);
+}
