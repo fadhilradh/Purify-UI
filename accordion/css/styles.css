@@ -98,6 +98,10 @@ a:active {
   text-align: left;
 }
 
+.accordion__header button:hover {
+  cursor: pointer;
+}
+
 .accordion__title {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -107,22 +111,6 @@ a:active {
 /* Indicators */
 .accordion__indicator > * {
   width: 1rem;
-}
-
-.accordion .indicator__plus {
-  display: block;
-}
-
-.accordion .indicator__minus {
-  display: none;
-}
-
-.accordion.is-open .indicator__minus {
-  display: block;
-}
-
-.accordion.is-open .indicator__plus {
-  display: none;
 }
 
 /* Accordion content */
