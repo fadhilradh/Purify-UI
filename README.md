@@ -1,4 +1,5 @@
-# native-web-components
-Collections of Native Web Components
+# Native Web Components
+
+Collections UI Components made using pure HTML, CSS, Javascript
 
 
