@@ -1,0 +1,15 @@
+.tab {
+  filter: grayscale(75%) brightness(0.9);
+}
+
+.tab.is-selected {
+  filter: none;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.is-selected {
+  display: block;
+}

@@ -14,19 +14,33 @@
     <link rel="stylesheet" href="../../normalize.css" />
     <link rel="stylesheet" href="../../reset.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/functional.css" />
   </head>
 
   <body>
     <div class="tabby">
       <div class="tabs">
-        <button class="tab is-selected" data-theme="digimon">Digimon</button>
-        <button class="tab" data-theme="pokemon">Pokemon</button>
-        <button class="tab" data-theme="tamagotchi">Tamagotchi</button>
+        <button
+          class="tab is-selected"
+          data-target="content-1"
+          data-theme="digimon"
+        >
+          Digimon
+        </button>
+        <button class="tab" data-theme="pokemon" data-target="content-2">
+          Pokemon
+        </button>
+        <button class="tab" data-theme="tamagotchi" data-target="content-3">
+          Tamagotchi
+        </button>
       </div>
 
       <div class="tab-contents">
-        <section class="tab-content is-selected" data-theme="digimon">
-          <img src="images/digimon.png" alt="digimon" />
+        <section
+          class="tab-content is-selected"
+          data-theme="digimon"
+          id="content-1"
+        >
           <h2>Digimon</h2>
           <p>
             Digimon, short for "Digital Monsters", is a Japanese media franchise
@@ -35,15 +49,9 @@
             which are monsters living in a "Digital World", a parallel universe
             that originated from Earth's various communication networks.
           </p>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/Digimon"
-              >More about Digimon &rarr;</a
-            >
-          </p>
         </section>
 
-        <section class="tab-content" data-theme="pokemon">
-          <img src="images/pokemon.png" alt="Pokemon" />
+        <section class="tab-content" id="content-2" data-theme="pokemon">
           <h2>Pokémon</h2>
           <p>
             Pokémon also known as Pocket Monsters in Japan, is a media franchise
@@ -52,15 +60,9 @@
             shared by all three companies, but Nintendo is the sole owner of the
             trademark.
           </p>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/Pokémon"
-              >More about Pokémon &rarr;</a
-            >
-          </p>
         </section>
 
-        <section class="tab-content" data-theme="tamagotchi">
-          <img src="images/tamagotchi.png" alt="Tamagotchi" />
+        <section class="tab-content" id="content-3" data-theme="tamagotchi">
           <h2>Tamagotchi</h2>
           <p>
             The Tamagotchi is a handheld digital pet, created in Japan by
@@ -68,11 +70,6 @@
             1996 in Japan and May 1, 1997 in the rest of the world, quickly
             becoming one of the biggest toy fads of the 1990s and early 2000s.
             As of 2010, over 76 million Tamagotchis had been sold worldwide.
-          </p>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/Tamagotchi"
-              >More about Tamagotchi &rarr;</a
-            >
           </p>
         </section>
       </div>
