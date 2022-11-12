@@ -4,6 +4,13 @@ const carousel = document.querySelector(".carousel__contents");
 const carouselDots = document.querySelectorAll(".carousel__dot");
 const dotsContainer = document.querySelector(".carousel__dots");
 
+function updateSlide(targetSlide, currentSlide) {
+  const targetSlideLeft = getComputedStyle(targetSlide).left;
+  carousel.style.left = "-" + targetSlideLeft;
+  currentSlide.classList.remove("is-selected");
+  targetSlide.classList.add("is-selected");
+}
+
 function updateActiveDot(buttonType) {
   const selectedDot = dotsContainer.querySelector(".is-selected");
   const targetDot =
@@ -12,13 +19,6 @@ function updateActiveDot(buttonType) {
       : selectedDot.previousElementSibling;
   selectedDot.classList.remove("is-selected");
   targetDot.classList.add("is-selected");
-}
-
-function updateSlide(targetSlide, currentSlide) {
-  const targetSlideLeft = getComputedStyle(targetSlide).left;
-  carousel.style.left = "-" + targetSlideLeft;
-  currentSlide.classList.remove("is-selected");
-  targetSlide.classList.add("is-selected");
 }
 
 nextButton.addEventListener("click", () => {
@@ -54,5 +54,16 @@ carouselDots.forEach((dot, index) => {
     const slides = carousel.querySelectorAll(".carousel__slide");
     const selectedSlideLeft = getComputedStyle(slides[index]).left;
     carousel.style.left = "-" + selectedSlideLeft;
+
+    if (index === 0) {
+      nextButton.removeAttribute("hidden");
+      prevButton.setAttribute("hidden", true);
+    } else if (index === 1) {
+      prevButton.removeAttribute("hidden");
+      nextButton.removeAttribute("hidden");
+    } else if (index === 2) {
+      prevButton.removeAttribute("hidden");
+      nextButton.setAttribute("hidden", true);
+    }
   });
 });
