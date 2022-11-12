@@ -27,13 +27,10 @@ body {
  * START EDITING HERE!
  * ===================
  */
-
-/**
- * Carousel contents
- */
 .carousel__contents-container {
   overflow: hidden;
 }
+
 .carousel__contents {
   position: relative;
   width: 100%;
@@ -73,9 +70,7 @@ body {
 .carousel__button {
   padding: 0.25em;
   border: none;
-  cursor: pointer;
 }
-
 .carousel__button svg {
   fill: var(--color-default-state);
 }
@@ -85,14 +80,13 @@ body {
   fill: var(--color-hover-state);
 }
 
-.carousel__button[hidden] {
+.carousel__button.is-hidden {
   display: none;
 }
 
 /**
  * Dots
  */
-
 .carousel__dots {
   grid-column: 1 / -1;
   justify-self: center;
@@ -104,7 +98,6 @@ body {
   padding: 0;
   border-radius: 100%;
   background-color: var(--color-default-state);
-  cursor: pointer;
 }
 
 .carousel__dot + .carousel__dot {
