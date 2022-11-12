@@ -3,6 +3,7 @@ const nextButton = document.querySelector(".next-button");
 const carousel = document.querySelector(".carousel__contents");
 const carouselDots = document.querySelectorAll(".carousel__dot");
 const dotsContainer = document.querySelector(".carousel__dots");
+const slides = carousel.querySelectorAll(".carousel__slide");
 
 function updateSlide(targetSlide, currentSlide) {
   const targetSlideLeft = getComputedStyle(targetSlide).left;
@@ -21,7 +22,12 @@ function updateActiveDot(buttonType) {
   targetDot.classList.add("is-selected");
 }
 
-nextButton.addEventListener("click", () => {
+slides.forEach((slide, index) => {
+  const slideWidth = slide.getBoundingClientRect().width;
+  slide.style.left = slideWidth * index + "px";
+});
+
+const slideWidth = nextButton.addEventListener("click", () => {
   prevButton.removeAttribute("hidden");
   const currentSlide = carousel.querySelector(".is-selected");
   const nextSlide = currentSlide.nextElementSibling;
