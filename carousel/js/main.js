@@ -27,7 +27,7 @@ slides.forEach((slide, index) => {
   slide.style.left = slideWidth * index + "px";
 });
 
-const slideWidth = nextButton.addEventListener("click", () => {
+const slideWidth = nextButton.addEventListener("click", (e) => {
   prevButton.removeAttribute("hidden");
   const currentSlide = carousel.querySelector(".is-selected");
   const nextSlide = currentSlide.nextElementSibling;
